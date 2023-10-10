@@ -1,0 +1,16 @@
+{
+  "folders": [
+	{
+		"path": ".."
+	},
+	{
+		"path": "../../CSS Learning Page"
+	},
+	{
+		"path": "../../CSS Grid learning page"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "Resume"
+  }
+}

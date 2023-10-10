@@ -1,0 +1,92 @@
+.footer {
+  grid-column: left-start / right-end;
+  grid-row: footer-start / footer-end;
+  padding: 3%;
+  margin: 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include sm800 {
+    margin-top: -50%;
+  }
+
+  @include sm600 {
+    margin-top: -80%;
+  }
+
+  &__copyright {
+    margin-top: 10%;
+
+    p {
+      font-size: 2rem;
+      text-align: center;
+
+      @include lg1500 {
+        font-size: 1.5rem;
+      }
+
+      @include sm900 {
+        font-size: 1.4rem;
+      }
+    }
+    @include sm600 {
+      width: 60%;
+      margin: 23% auto 0 auto;
+    }
+
+    @include sm350 {
+      margin: 25% auto 0 auto;
+    }
+  }
+
+  &__icons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+
+.fa-icon {
+  background: #463021;
+  background: -webkit-linear-gradient(to top right, #463021 20%, #916345 80%);
+  background: -moz-linear-gradient(to top right, #463021 20%, #916345 80%);
+  background: linear-gradient(to top right, #463021 20%, #916345 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.6s;
+  transform: scale(0.8);
+  cursor: pointer;
+  letter-spacing: 2rem;
+
+  @include lg1500 {
+    transform: scale(0.6);
+    letter-spacing: 1rem;
+  }
+
+  @include md1150 {
+    letter-spacing: 0.5rem;
+  }
+
+  @include sm800 {
+    letter-spacing: 0.2rem;
+  }
+
+  @include sm500 {
+    transform: scale(0.4);
+    margin: 0 -1rem;
+  }
+
+  &:hover {
+    background: #916345;
+    background: -webkit-linear-gradient(to bottom left, #463021 20%, #916345 80%);
+    background: -moz-linear-gradient(to bottom left, #463021 20%, #916345 80%);
+    background: linear-gradient(to bottom left, #463021 20%, #916345 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(1);
+  }
+}

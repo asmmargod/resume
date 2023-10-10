@@ -1,0 +1,941 @@
+.various__item {
+  grid-column: center-start / center-end;
+  grid-row: various-start / various-end;
+  display: grid;
+  grid-template-columns: repeat(10, [col-st] 1fr [col-en]);
+
+  &--coverletter-box {
+    grid-column: col-st 1 / col-en 3;
+    background: linear-gradient(135deg, #713abe, #9d76c1);
+    grid-row: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    color: $color-font-light;
+    height: 50%;
+    transition: all 0.8s;
+
+    @include md1150 {
+      font-size: 3.5rem;
+    }
+
+    @include sm800 {
+      grid-column: col-st 1 / col-en 10;
+      height: 100%;
+      padding: 10% 0;
+    }
+
+    &:hover {
+      background: linear-gradient(315deg, #713abe, #9d76c1);
+    }
+  }
+
+  &--coverletter-letter {
+    grid-column: col-st 4 / col-en 10;
+    background-color: $color-tertiary-dark;
+    color: $color-primary;
+    padding: 6% 10% 1%;
+
+    @include sm800 {
+      grid-column: col-st 1 / col-en 10;
+    }
+
+    h3 {
+      margin: 5% 0;
+    }
+
+    p {
+      margin: 10% 0;
+      font-size: 2rem;
+
+      @include sm800 {
+        margin: 5% 0;
+      }
+    }
+  }
+
+  &--coverletter-sign {
+    font-family: "Allura", cursive;
+    display: flex;
+    justify-content: flex-end;
+
+    span {
+      font-size: 5rem;
+
+      @include sm600 {
+        font-size: 4rem;
+      }
+    }
+  }
+
+  &--skills {
+    grid-column: col-st 1 / col-en 7;
+    position: relative;
+    background-color: $color-secondary-dark;
+    padding: 8% 10%;
+    z-index: 1;
+
+    @include sm800 {
+      grid-column: col-st 1 / col-en 10;
+      order: 2;
+    }
+
+    h3,
+    h5,
+    p {
+      color: $color-font-dark;
+      margin-bottom: 5%;
+    }
+
+    h5 {
+      font-weight: 400;
+    }
+
+    p {
+      position: relative;
+      top: 0.2rem;
+    }
+
+    &-quantity {
+      display: flex;
+      justify-content: flex-end;
+      position: relative;
+      top: -140%;
+      right: -55%;
+      color: $color-font-dark;
+      transition: all 0.5s;
+      margin: 0 5%;
+    }
+  }
+
+  &--skills-box {
+    grid-column: col-st 8 / col-en 10;
+    background: linear-gradient(135deg, #c63d2f, #e25e3e);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    color: $color-font-dark;
+    height: 50%;
+    transition: all 0.8s;
+    position: relative;
+
+    @include sm800 {
+      grid-column: col-st 1 / col-en 10;
+      order: 1;
+      height: 100%;
+      padding: 10% 0;
+    }
+
+    &-icon {
+      background: -webkit-linear-gradient(to top right, $color-primary 20%, $color-secondary 80%);
+      background: -moz-linear-gradient(to top right, $color-primary 20%, $color-secondary 80%);
+      background: linear-gradient(to top right, $color-primary 20%, $color-secondary 80%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      position: absolute;
+      top: 30%;
+      left: -5%;
+      z-index: 2;
+      animation: rotate 10s linear infinite;
+
+      @include sm800 {
+        left: 5%;
+        top: 40%;
+      }
+
+      @include sm600 {
+        top: 37%;
+      }
+
+      @include sm500 {
+        font-size: 3rem;
+      }
+    }
+
+    &:hover {
+      background: linear-gradient(315deg, #c63d2f, #e25e3e);
+    }
+
+    span {
+      transition: all 0.8s;
+    }
+    span:nth-child(1) {
+      display: block;
+      transition: all 0.8s;
+    }
+    span:nth-child(2) {
+      display: none;
+
+      @include md1300 {
+        display: block;
+      }
+    }
+
+    &:hover span:nth-child(1) {
+      display: none;
+    }
+
+    &:hover span:nth-child(2) {
+      display: block;
+      animation: fadeIn 1s;
+    }
+  }
+
+  &--experience-box {
+    grid-column: col-st 1 / col-en 3;
+    background: linear-gradient(135deg, #618264, #79ac78);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    color: $color-font-light;
+    height: 40%;
+    transition: all 0.8s;
+    position: relative;
+
+    &:hover {
+      background: linear-gradient(315deg, #618264, #79ac78);
+    }
+
+    @include lg1650 {
+      height: 35%;
+    }
+
+    @include sm900 {
+      font-size: 3.5rem;
+    }
+
+    @include sm800 {
+      grid-column: col-st 1 / col-en 10;
+      height: 100%;
+      padding: 10% 0;
+    }
+  }
+
+  &--experience {
+    grid-column: col-st 4 / col-en 10;
+    background-color: $color-accent-brown-light;
+    position: relative;
+    padding: 10% 15%;
+
+    @include sm800 {
+      grid-column: col-st 1 / col-en 10;
+      padding: 5% 15%;
+    }
+
+    &-icon {
+      background: -webkit-linear-gradient(to top right, $color-accent-brown-dark 20%, $color-secondary-light 80%);
+      background: -moz-linear-gradient(to top right, $color-accent-brown-dark 20%, $color-secondary-light 80%);
+      background: linear-gradient(to top right, $color-accent-brown-dark 20%, $color-secondary-light 80%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      position: absolute;
+      top: 10%;
+      animation: skull 10s linear infinite alternate;
+
+      @include sm600 {
+        font-size: 2.5rem;
+      }
+    }
+
+    &-list {
+      ///that's how I targeted two elements!
+      li:hover span:after {
+        opacity: 1;
+      }
+
+      li:hover .various__item--experience-list-event-date {
+        left: -26%;
+        transition: all 0.5s ease-out;
+      }
+
+      &:last-child {
+        @include sm800 {
+          display: none;
+        }
+      }
+
+      @include sm500 {
+        position: relative;
+        left: 7%;
+      }
+    }
+
+    &-list-event {
+      margin: 0 0 4.2rem 6rem;
+      position: relative;
+      list-style: none;
+      transition: 0.5s;
+
+      &:before {
+        content: "";
+        width: 0.3rem;
+        height: 70%;
+        position: absolute;
+        left: -3rem;
+        top: 5rem;
+        background-color: $color-primary;
+      }
+    }
+
+    &-list-circle {
+      position: absolute;
+      top: 0;
+      left: -3rem;
+
+      &:before {
+        content: " ";
+        display: block;
+        width: 3.5rem;
+        height: 3.5rem;
+        border: 0.3rem solid $color-primary;
+        border-radius: 90%;
+        position: absolute;
+        left: -1.6rem;
+        top: 0.3rem;
+        z-index: 1;
+        transition: 0.8s;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        width: 1.9rem;
+        height: 1.9rem;
+        left: -0.8rem;
+        top: 1.1rem;
+        border-radius: 90%;
+        background-color: $color-font-light;
+        opacity: 0;
+        transition: opacity 1s ease-in;
+      }
+
+      &:hover:after {
+        opacity: 1;
+      }
+    }
+
+    &-list-event-content {
+      margin-left: 3rem;
+
+      h6 {
+        padding-top: 1.4rem;
+        font-size: 2rem;
+        color: $color-font-light;
+        font-weight: 500;
+
+        @include sm600 {
+          font-size: 1.8rem;
+        }
+      }
+
+      p {
+        font-size: 1.7rem;
+        padding-top: 3rem;
+        color: $color-font-dark;
+
+        @include sm600 {
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    &-list-event-date {
+      position: absolute;
+      left: -22%;
+      top: 8%;
+      color: $color-font-light;
+      font-weight: 600;
+
+      @include lg1650 {
+        left: -25%;
+      }
+
+      @include lg1500 {
+        left: -30%;
+      }
+
+      @include md1300 {
+        left: -25%;
+      }
+
+      @include md1150 {
+        left: -30%;
+      }
+      @include sm900 {
+        left: -33%;
+      }
+
+      @include sm800 {
+        left: -28%;
+      }
+
+      @include sm600 {
+        left: -33%;
+        font-size: 1.5rem;
+      }
+
+      @include sm500 {
+        left: -37%;
+      }
+
+      @include sm350 {
+        left: -42%;
+      }
+    }
+  }
+
+  &--facts {
+    grid-column: col-st 1 / col-en 6;
+    background: linear-gradient(320deg, $color-accent-blue-mid, $color-accent-blue-light, $color-accent-blue-dark);
+    background-size: 600% 600%;
+    -webkit-animation: factsBackground 40s ease infinite;
+    -moz-animation: factsBackground 40s ease infinite;
+    animation: factsBackground 40s ease infinite;
+    padding: 15%;
+    display: grid;
+    grid-row-gap: 6rem;
+    grid-column-gap: 3rem;
+    color: $color-blue-dark;
+    font-variant: small-caps;
+    grid-template-columns: repeat(2, 1fr);
+    transition: all 0.5s;
+    position: relative;
+
+    @include sm900 {
+      grid-row-gap: 3rem;
+    }
+
+    @include sm800 {
+      grid-column: col-st 1 / col-en 10;
+      position: relative;
+      order: 4;
+    }
+
+    h3 {
+      text-shadow: 0px 0px 5px rgb(153, 248, 1);
+      text-align: center;
+      font-size: 3rem;
+      grid-column: 1 / 3;
+
+      @include sm900 {
+        font-size: 2.8rem;
+      }
+    }
+
+    p {
+      text-align: center;
+      font-weight: 600;
+      font-size: 1.5rem;
+      letter-spacing: 0.02rem;
+
+      @include sm900 {
+        font-size: 1.3rem;
+      }
+
+      @include sm800 {
+        font-size: 1.5rem;
+      }
+    }
+
+    &-item {
+      text-align: center;
+      font-weight: 900;
+      position: relative;
+      width: 110%;
+
+      &-number {
+        font-size: 4rem;
+        margin-bottom: 2%;
+
+        @include sm900 {
+          font-size: 3rem;
+        }
+
+        // &-sign {
+        //   position: absolute;
+        //   top: 62%;
+        //   left: 80%;
+        //   font-size: 3rem;
+
+        //   &-1 {
+        //     position: absolute;
+        //     left: 95% !important;
+        //   }
+
+        //   &-2 {
+        //     position: absolute;
+        //     top: 62%;
+        //     left: 80%;
+        //     font-size: 3rem;
+
+        //     @include lg1900 {
+        //       top: 56%;
+        //     }
+        //   }
+        // }
+      }
+    }
+
+    &-icon {
+      width: 10rem;
+      height: 10rem;
+      fill: url(#my-cool-gradient-2);
+      display: block;
+      margin: auto;
+      padding-bottom: 4%;
+
+      @include sm900 {
+        width: 8rem;
+        height: 8rem;
+      }
+
+      &:hover {
+        fill: url(#my-cool-gradient-3);
+      }
+
+      &-1 {
+        position: relative;
+        left: 0.7rem;
+      }
+    }
+  }
+
+  &--facts-box {
+    background: linear-gradient(135deg, #f76e11, #ff9f45);
+    grid-column: col-st 7 / col-en 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    color: $color-font-dark;
+    height: 50%;
+    position: relative;
+
+    @include sm800 {
+      grid-column: col-st 1 / col-en 10;
+      height: 100%;
+      padding: 10% 0;
+      order: 3;
+    }
+
+    &:hover {
+      background: linear-gradient(315deg, #f76e11, #ff9f45);
+    }
+
+    &-bugs {
+      background: -webkit-linear-gradient(to top right, $color-blue-dark 20%, $color-secondary-light 80%);
+      background: -moz-linear-gradient(to top right, $color-blue-dark 20%, $color-secondary-light 80%);
+      background: linear-gradient(to top right, $color-blue-dark 20%, $color-secondary-light 80%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: factsBugs 10s linear infinite alternate;
+      position: absolute;
+      top: 10%;
+      left: -5%;
+
+      @include sm800 {
+        left: 7%;
+        font-size: 3rem;
+      }
+    }
+  }
+
+  &--education-box {
+    grid-column: col-st 1 / col-en 3;
+    background: linear-gradient(135deg, #024b6d, #206b8d);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    color: $color-font-light;
+    height: 50%;
+    transition: all 0.8s;
+
+    &:hover {
+      background: linear-gradient(315deg, #024b6d, #206b8d);
+    }
+
+    @include sm800 {
+      grid-column: col-st 1 / col-en 10;
+      height: 100%;
+      padding: 10% 0;
+    }
+  }
+
+  &--education {
+    background-color: $color-accent-brown-dark;
+    grid-column: col-st 4 / col-en 10;
+    padding: 10% 18%;
+    color: $color-font-dark;
+    position: relative;
+
+    @include sm800 {
+      grid-column: col-st 1 / col-en 10;
+    }
+
+    &-icon {
+      position: absolute;
+      top: 5%;
+      left: 18%;
+      background: -webkit-linear-gradient(to top right, $color-primary 20%, $color-accent-brown-light 80%);
+      background: -moz-linear-gradient(to top right, $color-primary 20%, $color-accent-brown-light 80%);
+      background: linear-gradient(to top right, $color-primary 20%, $color-accent-brown-light 80%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: educate 10s linear infinite alternate;
+
+      @include lg1650 {
+        font-size: 3.5rem;
+        top: 4%;
+      }
+
+      @include lg1500 {
+        font-size: 3rem;
+      }
+
+      @include sm900 {
+        font-size: 2.7rem;
+      }
+
+      @include sm600 {
+        font-size: 2.5rem;
+      }
+
+      @include sm500 {
+        font-size: 2rem;
+      }
+    }
+
+    h3 {
+      font-size: 2.5rem;
+
+      @include sm600 {
+        font-size: 2rem;
+        margin-top: 2%;
+      }
+    }
+    h3,
+    p {
+      margin-bottom: 2rem;
+    }
+
+    p {
+      @include sm900 {
+        font-size: 1.5rem;
+      }
+    }
+
+    &-toggles {
+      &-item {
+        overflow: hidden;
+      }
+
+      &-button {
+        background: linear-gradient(45deg, $color-secondary-dark 30%, $color-secondary 70%);
+        height: 5rem;
+        width: 100%;
+        margin-bottom: 1rem;
+        padding: 1% 5%;
+        border: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: inherit;
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: $color-font-dark;
+        transition: all 0.8s;
+        cursor: pointer;
+
+        &:hover {
+          background: linear-gradient(45deg, $color-secondary 30%, $color-secondary-dark 70%);
+        }
+
+        i {
+          color: rgba(115, 255, 0, 0.5);
+          transition: all 0.3s;
+        }
+
+        &:hover i {
+          color: rgba(255, 0, 0, 0.5);
+        }
+
+        @include sm900 {
+          font-size: 1.5rem;
+        }
+      }
+
+      &-content {
+        padding: 5% 10%;
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
+
+/////skills section animations triggered on scroll
+.skill {
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  height: 4rem;
+  width: 70%;
+  transition: all 8s;
+  color: $color-font-light;
+  font-size: 2rem;
+  background: linear-gradient(90deg, $color-primary 0%, $color-primary 80%) no-repeat, linear-gradient(0deg, #0000 30%, #e9e1cb 30%, #f4f0e5 70%, #0000 70%) no-repeat;
+  background-size: 0%, 100%;
+
+  @include md1150 {
+    height: 3.5rem;
+    margin: 0.7rem;
+  }
+
+  p {
+    color: $color-font-light;
+    text-shadow: 1px 1px 1px $color-font-dark;
+  }
+}
+
+.skill.active {
+  background-size: calc(var(--percent) * 3%), 100%;
+}
+
+//education dropdown toggles divs
+#content-1 {
+  display: none;
+}
+
+#content-2 {
+  display: none;
+}
+
+#content-3 {
+  display: none;
+}
+
+#content-4 {
+  display: none;
+}
+
+///contact form at the bottom
+///
+.various__contact {
+  grid-column: center-start / center-end;
+  grid-row: contact-start / contact-end;
+  display: grid;
+  grid-template-columns: repeat(10, [col-stt] 1fr [col-end]);
+  grid-template-rows: repeat(2, [row] 1fr);
+
+  &--box {
+    grid-column: col-stt 7 / col-end 10;
+    background: linear-gradient(135deg, #fbd85d, #fae392);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    color: $color-font-dark;
+    transition: all 0.8s;
+
+    @include sm800 {
+      grid-column: col-stt 1 / col-end 10;
+      grid-row: row 1 / row 2;
+      height: 30%;
+    }
+
+    &:hover {
+      background: linear-gradient(315deg, #fbd85d, #fae392);
+    }
+
+    span {
+      transition: all 0.8s;
+    }
+    span:nth-child(1) {
+      display: block;
+      transition: all 0.8s;
+    }
+    span:nth-child(2) {
+      display: none;
+
+      @include md1300 {
+        display: block;
+      }
+    }
+
+    &:hover span:nth-child(1) {
+      display: none;
+    }
+
+    &:hover span:nth-child(2) {
+      display: block;
+      animation: fadeIn 1s;
+    }
+  }
+
+  &--form {
+    grid-column: col-stt 1 / col-end 6;
+    grid-row: 1 /3;
+    background-color: $color-accent-blue-dark;
+    padding: 7% 15%;
+    color: $color-font-light;
+    position: relative;
+
+    @include sm800 {
+      grid-column: col-stt 1 / col-end 10;
+      grid-row: 2 / 3;
+      top: -70%;
+    }
+
+    &-icon {
+      position: absolute;
+      top: 25%;
+      right: -5%;
+      transform: scale(1.8);
+      animation: rotate 8s linear infinite;
+      background: -webkit-linear-gradient(to top right, $color-secondary 20%, $color-accent-blue-light 80%);
+      background: -moz-linear-gradient(to top right, $color-secondary 20%, $color-accent-blue-light 80%);
+      background: linear-gradient(to top right, $color-secondary 20%, $color-accent-blue-light 80%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      @include sm900 {
+        font-size: 4rem;
+      }
+
+      @include sm800 {
+        right: 6%;
+      }
+
+      @include sm600 {
+        right: 7%;
+      }
+    }
+
+    &-icon-2 {
+      position: absolute;
+      top: 10%;
+      left: -4%;
+      animation: rotate 4s linear infinite;
+      background: -webkit-linear-gradient(to top right, $color-secondary 20%, $color-accent-blue-light 80%);
+      background: -moz-linear-gradient(to top right, $color-secondary 20%, $color-accent-blue-light 80%);
+      background: linear-gradient(to top right, $color-secondary 20%, $color-accent-blue-light 80%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      @include md1300 {
+        left: -4%;
+      }
+
+      @include sm900 {
+        left: 0;
+        font-size: 4rem;
+      }
+
+      @include sm800 {
+        left: 4%;
+      }
+
+      @include sm500 {
+        left: 7%;
+      }
+    }
+
+    h3,
+    p {
+      margin-bottom: 3rem;
+    }
+
+    h3 {
+      font-size: 2.5rem;
+    }
+
+    p {
+      font-size: 2rem;
+
+      @include sm900 {
+        font-size: 1.5rem;
+      }
+    }
+
+    &-input {
+      border: none;
+      padding: 1% 0.2%;
+      background-color: transparent;
+      font-family: inherit;
+      border-bottom: 2px solid $color-accent-blue-mid;
+      width: 100%;
+
+      &::placeholder {
+        color: $color-accent-blue-mid;
+      }
+
+      &:focus {
+        outline: none;
+        border-bottom: 2px solid $color-secondary-dark;
+
+        &:required {
+          border-bottom: 2px solid $color-secondary-dark;
+        }
+      }
+
+      &:required {
+        border-bottom: 2px solid $color-accent-blue-light;
+
+        &::placeholder {
+          color: $color-accent-blue-light;
+        }
+      }
+    }
+
+    &-input:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+
+    &-button {
+      border: 2px solid $color-accent-blue-mid;
+      color: $color-font-light;
+      font-family: inherit;
+      background-color: transparent;
+      padding: 1.5rem 2rem;
+      width: 80%;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition: all 1.5s;
+
+      &:before {
+        content: "";
+        background-color: whitesmoke;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 3rem;
+        position: absolute;
+        transform: translateX(-100%) rotate(45deg);
+        transition: all 1.5s;
+      }
+
+      &:hover:before {
+        transform: translateX(100%) rotate(45deg);
+      }
+
+      &:hover {
+        background-color: $color-secondary;
+        color: $color-blue-dark;
+        border: none;
+        font-weight: 600;
+      }
+    }
+  }
+}

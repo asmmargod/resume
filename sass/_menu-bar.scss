@@ -1,0 +1,286 @@
+.menu {
+  position: relative;
+  width: 100%;
+  grid-column: center-start / center-end;
+  z-index: 5;
+
+  @include md1300 {
+    background-color: $color-secondary;
+    grid-column: left-start / right-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 8rem;
+  }
+
+  &__checkbox {
+    width: 2.5rem;
+    height: 2.5rem;
+    position: fixed;
+    top: 4.5%;
+    left: 15.5%;
+    display: none;
+    cursor: pointer;
+
+    @include md1300 {
+      top: 4%;
+      left: 90%;
+    }
+  }
+
+  &__button {
+    cursor: pointer;
+  }
+
+  &__icon {
+    position: fixed;
+    margin-top: 2.5%;
+    left: 14.8%;
+
+    @include lg1500 {
+      margin-top: 3%;
+    }
+
+    @include md1300 {
+      left: 90%;
+      z-index: 2;
+    }
+
+    @include md1150 {
+      top: 1%;
+    }
+
+    @include sm900 {
+      top: 1.5%;
+    }
+
+    @include sm800 {
+      top: 2%;
+    }
+
+    &,
+    &::before,
+    &::after {
+      width: 3rem;
+      height: 3px;
+      background-color: $color-font-dark;
+      display: inline-block;
+      border-radius: 30%;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all 0.5s;
+    }
+
+    &:before {
+      top: -0.7rem;
+      width: 70%;
+    }
+
+    &:hover:before {
+      width: 100%;
+    }
+
+    &:after {
+      top: 0.7rem;
+      width: 70%;
+      left: 1rem;
+    }
+
+    &:hover:after {
+      width: 100%;
+      left: 0;
+    }
+  }
+
+  &__nav {
+    transition: all 0.8s cubic-bezier(0.22, 2.02, 0.81, -0.06);
+    transform: translateY(-100%);
+    position: fixed;
+    padding: 0 13%;
+    z-index: 20;
+
+    @include lg1500 {
+      padding: 0 7%;
+    }
+
+    @include md1300 {
+      top: 5%;
+      left: 84%;
+      padding: 0 2%;
+      transform: translateY(-150%);
+      overflow: hidden;
+      transition: all 0.8s cubic-bezier(0.12, 1.28, 0.83, 0.67);
+    }
+  }
+
+  &__list {
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+
+    @include md1300 {
+      display: block;
+    }
+  }
+
+  &__item {
+    margin: 2.5rem 0;
+    margin-right: 1rem;
+    padding: 0 1rem;
+    list-style: none;
+
+    &:hover span {
+      transform: scaleY(1);
+    }
+  }
+
+  &__link {
+    padding: 0.5rem 0.5rem;
+    text-decoration: none;
+    font-variant: small-caps;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: $color-font-dark;
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    text-align: center;
+    transition: all 0.5s;
+
+    &:hover {
+      color: $color-font-light;
+    }
+
+    // &:active {
+    //   color: red;
+    // }
+
+    span {
+      position: absolute;
+      width: 100%;
+      height: 25%;
+      background-color: $color-font-dark;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      transform: scaleY(0);
+      transition: 0.5s;
+      transform-origin: top;
+    }
+
+    span:nth-child(2) {
+      top: 25%;
+      transition-delay: 0.15s;
+    }
+    span:nth-child(3) {
+      top: 50%;
+      transition-delay: 0.3s;
+    }
+    span:nth-child(4) {
+      top: 75%;
+      transition-delay: 0.45s;
+    }
+  }
+  //show the menu with the checkbox hack
+  &__checkbox:checked ~ &__nav {
+    transform: translateY(0);
+    background-color: $color-secondary;
+  }
+  //show the social links with checkbox hack
+  &__checkbox:checked ~ &__social--links {
+    @include md1300 {
+      transform: translateX(0) translateY(0);
+      transition: all 0.8s cubic-bezier(0.12, 1.28, 0.83, 0.67);
+      opacity: 1;
+    }
+  }
+
+  &__checkbox:checked + &__button &__icon {
+    background-color: transparent;
+  }
+
+  &__checkbox:checked + &__button &__icon:before {
+    transform: rotate(135deg) translate(-0.6rem, -0.95rem);
+    width: 80%;
+  }
+  &__checkbox:checked + &__button &__icon:after {
+    transform: rotate(-135deg) translate(0.6rem, 0.9rem);
+    width: 80%;
+    left: 0.8rem;
+  }
+
+  &__social {
+    color: $color-font-dark;
+    font-variant: small-caps;
+    position: fixed;
+    top: 3%;
+    left: 12.2%;
+    transform: rotate(-90deg) translateX(-100%);
+
+    @include lg1650 {
+      left: 12%;
+    }
+
+    @include lg1500 {
+      left: 11.4%;
+    }
+
+    @include md1300 {
+      transform: rotate(0) translateX(0);
+      left: 17.8%;
+    }
+
+    &--links {
+      font-variant: small-caps;
+      position: fixed;
+      width: 18%;
+      top: 12%;
+      left: 6.5%;
+      transform: rotate(-90deg) translateX(-80%);
+
+      i {
+        margin: 0 2%;
+        transform: translateY(0.2rem);
+      }
+
+      a {
+        color: $color-font-light;
+        text-decoration: none;
+        margin: 0 1%;
+        padding: 1.5%;
+        transition: all 0.5s;
+
+        &:hover,
+        &:active {
+          color: $color-font-dark;
+          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+        }
+      }
+
+      @include lg1650 {
+        top: 17%;
+        left: 7%;
+      }
+      @include lg1500 {
+        width: 20%;
+        left: 5.7%;
+      }
+
+      @include md1300 {
+        width: 27%;
+        padding: 0 1%;
+        top: 3%;
+        left: 58%;
+        transform: rotate(0) translateX(400%) translateY(-400%);
+        transition: all 0.5s;
+        opacity: 0;
+      }
+    }
+  }
+}

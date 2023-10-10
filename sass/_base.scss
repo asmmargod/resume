@@ -1,0 +1,356 @@
+//Colours
+$color-primary: #65451f;
+$color-secondary: #c8ae7d;
+$color-secondary-dark: #c8a67d;
+$color-secondary-light: #c8b57d;
+$color-tertiary-light: #f4f0e5;
+$color-tertiary-dark: #e9e1cb;
+$color-accent-blue-light: #b1c1de;
+$color-accent-blue-mid: #7d97c8;
+$color-accent-blue-dark: #4b5b78;
+$color-accent-brown-light: #ceab93;
+$color-accent-brown-dark: #ad8b73;
+$color-footer-light: #916345;
+$color-footer-dark: #463021;
+$color-blue-dark: #354054;
+$color-font-light: #ffe4af;
+$color-font-dark: #381100;
+
+//font-size
+
+//shadow
+$global-shadow: 1.2rem 0.2rem 1.5rem #38110038;
+$global-shadow-sm: 0 0.2rem 1rem #38110038;
+
+//Cursive fonts
+// font-family: 'Allura', cursive;
+// font-family: 'Barriecito', cursive;
+
+// Shadows
+
+//Responsive Breakpoints
+// $bp-1650: 103.125em; // 1650px/16px = 103.125em
+// $bp-1500: 93.75em; //1500px/16px = 93.75em
+// $bp-1300: 81.25em; //1300px/16px = 81.25em
+// $bp-1150: 71.875em; //1150px/16 = 71.875em
+// $bp-900: 56.25em; //900/16 = 56.25em
+// $bp-800: 50em; //800px/16px = 50em
+// $bp-600: 37.5em; //600px/ 16px =37.5em
+// $bp-500: 31.25em; //500px/16px = 31.25em
+// $bp-350: 21.875em; // 350px/16px = 21.875em
+
+//mixins for BP
+$screen-1900: 118.75em;
+$screen-1750: 109.375em;
+$screen-1650: 103.125em;
+$screen-1500: 93.75em;
+$screen-1300: 81.25em;
+$screen-1150: 71.875em;
+$screen-900: 56.25em;
+$screen-800: 50em;
+$screen-600: 37.5em;
+$screen-500: 31.25em;
+$screen-350: 21.875em;
+
+@mixin lg1900 {
+  @media (max-width: #{$screen-1900}) {
+    @content;
+  }
+}
+
+@mixin lg1750 {
+  @media (max-width: #{$screen-1750}) {
+    @content;
+  }
+}
+
+@mixin lg1650 {
+  @media (max-width: #{$screen-1650}) {
+    @content;
+  }
+}
+@mixin lg1500 {
+  @media (max-width: #{$screen-1500}) {
+    @content;
+  }
+}
+@mixin md1300 {
+  @media (max-width: #{$screen-1300}) {
+    @content;
+  }
+}
+@mixin md1150 {
+  @media (max-width: #{$screen-1150}) {
+    @content;
+  }
+}
+@mixin sm900 {
+  @media (max-width: #{$screen-900}) {
+    @content;
+  }
+}
+
+@mixin sm800 {
+  @media (max-width: #{$screen-800}) {
+    @content;
+  }
+}
+@mixin sm600 {
+  @media (max-width: #{$screen-600}) {
+    @content;
+  }
+}
+@mixin sm500 {
+  @media (max-width: #{$screen-500}) {
+    @content;
+  }
+}
+@mixin sm350 {
+  @media (max-width: #{$screen-350}) {
+    @content;
+  }
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.container {
+  background-color: $color-secondary;
+  display: grid;
+  grid-template-rows:
+    [bar-start] 8rem [bar-end hero-start] 80vh [hero-end about-start] minmax(20rem, min-content) [about-end portofolio-start] 120vh [portofolio-end various-start] repeat(
+      5,
+      minmax(min-content, max-content)
+    )
+    [various-end contact-start] minmax(10rem, max-content) [contact-end footer-start] minmax(min-content, max-content) [footer-end];
+  grid-template-columns: [left-start] 18% [left-end center-start] 64% [center-end right-start] 18% [right-end];
+
+  position: relative;
+
+  @include md1300 {
+    grid-template-columns: [left-start] 5% [left-end center-start] 90% [center-end right-start] 5% [right-end];
+  }
+
+  @include md1150 {
+    grid-template-columns: [left-start] 0 [left-end center-start] 100% [center-end right-start] 0 [right-end];
+    grid-template-rows:
+      [bar-start] 8rem [bar-end hero-start] 60vh [hero-end about-start] minmax(20rem, min-content) [about-end portofolio-start] 1fr [portofolio-end various-start] repeat(
+        5,
+        minmax(min-content, max-content)
+      )
+      [various-end contact-start] minmax(10rem, max-content) [contact-end footer-start] minmax(min-content, max-content) [footer-end];
+  }
+
+  @include sm800 {
+    grid-template-columns: [left-start] 0 [left-end center-start] 100% [center-end right-start] 0 [right-end];
+    grid-template-rows:
+      [bar-start] 8rem [bar-end hero-start] 80vh [hero-end about-start] minmax(20rem, min-content) [about-end portofolio-start] 1fr [portofolio-end various-start] repeat(
+        5,
+        minmax(min-content, max-content)
+      )
+      [various-end contact-start] minmax(10rem, max-content) [contact-end footer-start] minmax(min-content, max-content) [footer-end];
+  }
+
+  @include sm500 {
+    grid-template-columns: [left-start] 0 [left-end center-start] 110% [center-end right-start] 0 [right-end];
+  }
+
+  @include sm350 {
+    grid-template-columns: [left-start] 0 [left-end center-start] 121% [center-end right-start] 0 [right-end];
+  }
+}
+
+//animations
+
+//animation of the text About Me to make it smooth as the display doesn't work as for transitions
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+//animation for skull icon
+
+@-webkit-keyframes skull {
+  from {
+    left: 10%;
+  }
+  to {
+    left: 65%;
+  }
+}
+
+@keyframes skull {
+  from {
+    left: 10%;
+  }
+  to {
+    left: 65%;
+  }
+}
+
+//hidden 2 div animated background
+
+@-webkit-keyframes coolBackground {
+  0% {
+    background-position: 0% 19%;
+  }
+  50% {
+    background-position: 100% 82%;
+  }
+  100% {
+    background-position: 0% 19%;
+  }
+}
+@-moz-keyframes coolBackground {
+  0% {
+    background-position: 0% 19%;
+  }
+  50% {
+    background-position: 100% 82%;
+  }
+  100% {
+    background-position: 0% 19%;
+  }
+}
+@keyframes coolBackground {
+  0% {
+    background-position: 0% 19%;
+  }
+  50% {
+    background-position: 100% 82%;
+  }
+  100% {
+    background-position: 0% 19%;
+  }
+}
+
+//animation background for facts icons
+
+@-webkit-keyframes factsBackground {
+  0% {
+    background-position: 0% 5%;
+  }
+  50% {
+    background-position: 100% 96%;
+  }
+  100% {
+    background-position: 0% 5%;
+  }
+}
+@-moz-keyframes factsBackground {
+  0% {
+    background-position: 0% 5%;
+  }
+  50% {
+    background-position: 100% 96%;
+  }
+  100% {
+    background-position: 0% 5%;
+  }
+}
+@keyframes factsBackground {
+  0% {
+    background-position: 0% 5%;
+  }
+  50% {
+    background-position: 100% 96%;
+  }
+  100% {
+    background-position: 0% 5%;
+  }
+}
+
+//rotatin square
+@-webkit-keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+//animation for education icon
+
+@-webkit-keyframes educate {
+  from {
+    left: 18%;
+  }
+  to {
+    left: 75%;
+  }
+}
+
+@keyframes educate {
+  from {
+    left: 18%;
+  }
+  to {
+    left: 75%;
+  }
+}
+
+//animations for facts
+
+@-webkit-keyframes factsBugs {
+  from {
+    top: 10%;
+  }
+  to {
+    top: 75%;
+  }
+}
+
+@keyframes factsBugs {
+  from {
+    top: 10%;
+  }
+  to {
+    top: 75%;
+  }
+}
