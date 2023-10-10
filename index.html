@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Allura&family=Barriecito&family=Josefin+Sans:wght@100;200;400;600&family=Montserrat:wght@100;200;400;600;700;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="sass/main.css" />
+  <link rel="shortcut icon" type="image/png" href="images/icon.svg" />
+  <script src="https://kit.fontawesome.com/357d4590cd.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <title>Marcin C- Designer</title>
+</head>
+
+<body class="container">
+  <div class="menu">
+    <input type="checkbox" class="menu__checkbox" id="navi-toggle" />
+    <label for="navi-toggle" class="menu__button"><span class="menu__icon">&nbsp;</span></label>
+
+    <nav class="menu__nav">
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a href="#hero__section" class="menu__link">About<span></span><span></span><span></span><span></span></a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Portofolio<span></span><span></span><span></span><span></span></a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Cover Letter<span></span><span></span><span></span><span></span></a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Skills<span></span><span></span><span></span><span></span></a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Facts<span></span><span></span><span></span><span></span></a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Experience<span></span><span></span><span></span><span></span></a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Contact<span></span><span></span><span></span><span></span></a>
+        </li>
+      </ul>
+    </nav>
+    <div class="menu__social">
+      <h3>Marcin Czop</h3>
+    </div>
+    <div class="menu__social--links">
+      <a href="#"><i class="fa-brands fa-facebook fa-2xs"></i>FB</a>
+      <a href="#"><i class="fa-brands fa-twitter fa-2xs"></i>TW</a>
+      <a href="#"><i class="fa-brands fa-instagram fa-2xs"></i>IN</a>
+      <a href="#"><i class="fa-brands fa-linkedin fa-2xs"></i>LI</a>
+    </div>
+  </div>
+
+  <div class="hero__hero" id="hero__section">
+    <div class="hero__hero--picture">
+      <img src="images/marcin.png" alt="Marcin" class="hero__hero--picture-img" />
+    </div>
+    <div class="hero__hero--text">
+      <h1 class="hero__hero--text-heading">
+        Hello <br />
+        I'm Marcin <br />Czop
+      </h1>
+      <p class="hero__hero--text-about">
+        A supporter slash designer. I like that flexibility of the "slash". I support others in getting what they need
+        and through this I design my own unique perspective on life
+        which in turn helps me to come out of a box and design simple, yet beautiful websites.
+      </p>
+    </div>
+  </div>
+  <div class="hero__about" id="about__section">
+    <div class="hero__about--box"><span>About</span> &nbsp;<span> Me</span></div>
+    <div class="hero__about--more">
+      <h3 class="hero__about--more-heading">My top Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+      <p class="hero__about--more-text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro odio eveniet possimus nulla architecto
+        reprehenderit molestiae? Nulla natus rem, saepe ut enim ex quisquam
+        soluta. Sequi illum eum illo autem?
+      </p>
+      <div class="hero__about--more-content-1">
+        <svg class="hero__about--more-icon hero__about--more-icon-1">
+          <use xlink:href="images/sprite.svg#i-desktop"></use>
+        </svg>
+        <p>Web Design</p>
+        <span></span>
+      </div>
+      <div class="hero__about--more-content-2">
+        <svg class="hero__about--more-icon hero__about--more-icon-2">
+          <use xlink:href="images/sprite.svg#i-clock"></use>
+        </svg>
+        <p>Responds quickly</p>
+        <span></span>
+      </div>
+      <div class="hero__about--more-content-3">
+        <svg class="hero__about--more-icon hero__about--more-icon-3">
+          <use xlink:href="images/sprite.svg#i-chat"></use>
+        </svg>
+        <p>Communicative</p>
+        <span></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="portofolio">
+    <div class="portofolio__item--1" onclick="showHidden1()">
+      <img src="images/design.jpg" alt="coding" class="portofolio__item--1-img">
+      <span class="portofolio__item--1-btn">
+        <h4>Website Design</h4>
+        <p>Ideas</p>
+      </span>
+    </div>
+
+    <div class="portofolio__item--2" onclick="showHidden2()">
+      <img src="images/it-support.jpg" alt="support" class="portofolio__item--2-img">
+      <span class="portofolio__item--2-btn">
+        <h4>IT Support</h4>
+        <p>For everyone</p>
+      </span>
+    </div>
+
+    <div class="portofolio__item--3" onclick="showHidden3()">
+      <img src="images/resume.jpg" alt="resume" class="portofolio__item--3-img">
+      <span class="portofolio__item--3-btn">
+        <h4>Resume</h4>
+        <p>Traditional Resume</p>
+      </span>
+    </div>
+    <div class="portofolio__item--4" onclick="showHidden4()">
+      <img src="images/non-profit.jpg" alt="non-profit-volunteering" class="portofolio__item--4-img">
+      <span class="portfolio__item--4-btn">
+        <h4>Volunteering</h4>
+        <p>Non-profit Organization</p>
+      </span>
+    </div>
+    <div class="portofolio__item--5">
+      <h3>Placeholder</h3>
+      <div class="portofolio__item--5-hidden">
+        <p>Not sure if to remove that part since I can't expand the grid dynamiclly here. It was meant to serve as a button to expand stuff below </p>
+      </div>
+    </div>
+
+    <div class="portofolio__item--box">
+      <span>Portofolio</span>
+    </div>
+
+    <!-- Hidden items -->
+
+    <div class="portofolio__item--1-hidden" id="hidden-div-1">
+      <button onclick="hideHidden1()" class="portofolio__item--1-hidden-btn"><i
+          class="fa-solid fa-arrow-right-to-bracket fa-3x"></i></button>
+      <div class="portofolio__item--1-hidden-slider">
+        <button class="portofolio__item--1-hidden-slider-slide-arrow" id="slide-arrow-prev">&#8249</button>
+        <button class="portofolio__item--1-hidden-slider-slide-arrow" id="slide-arrow-next">&#8250</button>
+
+        <ul class="portofolio__item--1-hidden-slider-slides" id="slides-container">
+          <li class="portofolio__item--1-hidden-slider-slide">
+            <img src="images/cycle-1.png" alt="cycling">
+            <h2>Cycling you say?</h2>
+            <h4>Cycling does not have to be straightforward</h4>
+            <p>I made this webpage as I was learning some more advanced CSS techniques and I'm really happy with how it
+              all came out. I always like to add some humour into project I create so you might see there some funny or
+              at least unusual lines of text.
+              <br> <br>I can also be serious where needed so don't worry about being too funny.
+            </p>
+            <a class="portofolio__item--1-hidden-slider-slide-btn" href="https://asmmargod.github.io/cycling/"
+              target=”_blank”>Go to see the webpage</a>
+          </li>
+          <li class="portofolio__item--1-hidden-slider-slide">
+            <img src="images/cycle-2.png" alt="cycling">
+            <h2>Suiting various needs</h2>
+            <h4>From laidback to hardcore</h4>
+            <p>This section of the page is something that makes the project stand out in comparison to some other
+              similar pages out there. The rotating cards really make it all come to life and the colours go together
+              quite well in my opinion.
+              <br> <br>Ideal section to present people with various options and make them go "Wow"!
+            </p>
+            <a class="portofolio__item--1-hidden-slider-slide-btn" href="https://asmmargod.github.io/cycling/"
+              target=”_blank”>Go to see the webpage</a>
+          </li>
+          <li class="portofolio__item--1-hidden-slider-slide"><img src="images/hotels-1.png" alt="cycling">
+            <h2>Hotels from hell idea</h2>
+            <h4>An alternative not offered elsewhere!</h4>
+            <p>As I mentioned before, I like to incoroporate a bit of humour into my work as I believe that making
+              people smile is a good use of ones' time.
+              <br> <br>When I was learning some advnaced CSS techniuqes I had an idea of creating a webpage for tourist
+              that seek an alternative way of spending holidays so here's the webpage
+            </p>
+            <a class="portofolio__item--1-hidden-slider-slide-btn" href="https://asmmargod.github.io/hell-hotels/"
+              target=”_blank”>Go to see the webpage</a>
+          </li>
+          <li class="portofolio__item--1-hidden-slider-slide"><img src="images/hotels-2.png" alt="cycling">
+            <h2>Hotels from hell idea</h2>
+            <h4>Flights that might be hard to forget or remember!</h4>
+            <p>This page of the unique hell hotels offers people insight into how flying might be the most thrilling and
+              exciting moments of one's holiday trip.
+              <br> <br>
+              Even it might seem that it is quite grim I think the pictures look quite interesting and sparking an
+              interest in a person viewing a page is a good choice for generating some traffic to your business.
+            </p>
+            <a class="portofolio__item--1-hidden-slider-slide-btn" href="https://asmmargod.github.io/hell-hotels/"
+              target=”_blank”>Go to see the webpage</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="portofolio__item--2-hidden" id="hidden-div-2">
+      <button onclick="hideHidden2()" class="portofolio__item--2-hidden-btn"><i
+          class="fa-solid fa-angles-left fa-3x"></i></button>
+      <h2>Supporting others is fun</h2>
+      <h4>There is so much to gain from supporting others in getting to where they need to get</h4>
+      <p>I like flexibility and that flexibility allows me to collaborate and support people who live all around the
+        world. Some of their needs seem straight forward and others not so but I like the challenge and sense of
+        accomplishment I get when they achieve their goals with my help.</p>
+      <img src="images/support-desk.jpg" alt="computer">
+      <p>Working from home also gives me the opportunity to geek out with the way my surroundings look like. I can go as
+        crazy as I want with colours and when I feel that it's too much, I can always dial that down. It's a nice
+        feeling to have this flexibility.</p>
+      <img src="images/cool-desk.jpg" alt="pc">
+      <p>I learn quickly so even though I might not know something today it doesn't mean I won't know it tomorrow... or
+        next week. Some things require more time than others and I am aware of my limitations and will be upfront with
+        you about it.</p>
+    </div>
+    <div class="portofolio__item--3-hidden" id="hidden-div-3">
+      <button onclick="hideHidden3()" class="portofolio__item--3-hidden-btn"><i class="fa-solid fa-backward fa-2x"></i>
+      </button>
+      <h3>Resume</h3>
+      <p>Download the PDF here</p>
+      <!-- use embed once it's done so the page inspector doesn't break -->
+    </div>
+
+    <div class="portofolio__item--4-hidden" id="hidden-div-4">
+      <button onclick="hideHidden4()" class="portofolio__item--4-hidden-btn"><i
+          class="fa-solid fa-angles-right fa-3x"></i>
+      </button>
+
+      <div class="portofolio__item--4-hidden-content">
+        <video class="portofolio__item--4-hidden-content-video" src="images/volunteer.mp4" width="960" height="540" autoplay muted loop></video>
+        <h3>Self Discovery</h3>
+        <p>It's funny how I discovered that I love creating websites through volunteering for a non-profit organzation.
+          To make it even more strange that organzation has nothing to do with web design. Go figure!</p>
+      </div>
+    </div>
+  </div>
+  <div class="various__item">
+    <div class="various__item--coverletter-box">
+      <p>Cover Letter</p>
+    </div>
+    <div class="various__item--coverletter-letter">
+      <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam possimus nemo atque?</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque itaque assumenda, ab, animi nesciunt
+        maiores nobis accusantium distinctio voluptatem possimus expedita, aliquid iste aperiam sed architecto in
+        deleniti excepturi tenetur?<br> <br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti animi iure voluptate dolorem suscipit ipsam
+        ducimus autem dicta qui, sequi aut necessitatibus consectetur magnam, eos, facilis magni natus voluptatem.
+        Nostrum?</p>
+      <p class="various__item--coverletter-sign"><span>Marcin Czop</span></p>
+    </div>
+    <div class="various__item--skills" id="counters">
+      <div class="various__item--textbox">
+        <h3>This how much time I spent with each tool</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus maxime sapiente natus adipisci a similique
+          magni eligendi amet</p>
+      </div>
+      <div class="skill" style="--percent:28;">
+        <p>CSS</p>
+        <div class="various__item--skills-quantity" data-count="48"></div>
+      </div>
+
+      <div class="skill" style="--percent:25;">
+        <p>HTML</p>
+        <div class="various__item--skills-quantity" data-count="77"></div>
+      </div>
+      <div class="skill" style="--percent:20;">
+        <p>WordPress</p>
+        <div class="various__item--skills-quantity" data-count="277"></div>
+      </div>
+      <div class="skill" style="--percent:15;">
+        <p>Divi Builder</p>
+        <div class="various__item--skills-quantity" data-count="22"></div>
+      </div>
+      <div class="skill" style="--percent:10;">
+        <p>Google Tools</p>
+        <div class="various__item--skills-quantity" data-count="47"></div>
+      </div>
+      <div class="skill" style="--percent:2;">
+        <p>JavaScript</p>
+        <div class="various__item--skills-quantity" data-count="27"></div>
+      </div>
+
+    </div>
+    <div class="various__item--skills-box">
+      <span>Tool</span> &nbsp;<span>Bag</span>
+      <i class="fa-solid fa-screwdriver-wrench various__item--skills-box-icon"></i>
+    </div>
+
+    <div class="various__item--experience-box">
+      <span>Experience</span>
+      <i class="fa-solid fa-briefcase various__item--experience-icon"></i>
+    </div>
+    <div class="various__item--experience">
+      <ul class="various__item--experience-list">
+        <li class="various__item--experience-list-event">
+          <span class="various__item--experience-list-circle"></span>
+          <div class="various__item--experience-list-event-content">
+            <h6>Event</h6>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam aliquid illo odit quisquam illum
+              consequatur fugiat doloremque, quae?</p>
+          </div>
+          <div class="various__item--experience-list-event-date">2005</div>
+        </li>
+      </ul>
+      <ul class="various__item--experience-list">
+        <li class="various__item--experience-list-event"><span class="various__item--experience-list-circle"></span>
+          <div class="various__item--experience-list-event-content">
+            <h6>Event</h6>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam aliquid illo odit quisquam illum
+              consequatur fugiat doloremque, quae?</p>
+          </div>
+          <div class="various__item--experience-list-event-date">2005</div>
+        </li>
+      </ul>
+      <ul class="various__item--experience-list">
+        <li class="various__item--experience-list-event"><span class="various__item--experience-list-circle"></span>
+          <div class="various__item--experience-list-event-content">
+            <h6>Event</h6>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam aliquid illo odit quisquam illum
+              consequatur fugiat doloremque, quae?</p>
+          </div>
+          <div class="various__item--experience-list-event-date">2005</div>
+        </li>
+      </ul>
+      <ul class="various__item--experience-list">
+        <li class="various__item--experience-list-event"><span class="various__item--experience-list-circle"></span>
+          <div class="various__item--experience-list-event-content">
+            <h6>Event</h6>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam aliquid illo odit quisquam illum
+              consequatur fugiat doloremque, quae?</p>
+          </div>
+          <div class="various__item--experience-list-event-date">2005</div>
+        </li>
+      </ul>
+      <ul class="various__item--experience-list">
+        <li class="various__item--experience-list-event"><span class="various__item--experience-list-circle"></span>
+          <div class="various__item--experience-list-event-content">
+            <h6>Event</h6>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam aliquid illo odit quisquam illum
+              consequatur fugiat doloremque, quae?</p>
+          </div>
+          <div class="various__item--experience-list-event-date">2005</div>
+        </li>
+      </ul>
+      <ul class="various__item--experience-list">
+        <li class="various__item--experience-list-event"><span class="various__item--experience-list-circle"></span>
+          <div class="various__item--experience-list-event-content">
+          </div>
+          <div class="various__item--experience-list-event-date"></div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="various__item--facts" id="fun-facts">
+      <h3>These things power me up!</h3>
+      <div class="various__item--facts-item various__item--facts-item-1">
+        <svg class="various__item--facts-icon various__item--facts-icon-1">
+          <use xlink:href="images/sprite.svg#i-coffee1"></use>
+        </svg>
+        <!-- <div class="various__item--facts-item-number-sign-2">+</div> -->
+        <div class="various__item--facts-item-number " data-count="57880">
+        </div>
+        <p>Earl Grey is my fuel to creativity</p>
+      </div>
+      <div class="various__item--facts-item ">
+        <svg class="various__item--facts-icon">
+          <use xlink:href="images/sprite.svg#i-cassette"></use>
+        </svg>
+        <!-- <div class="various__item--facts-item-number-sign-2">+</div> -->
+        <div class="various__item--facts-item-number" data-count="37890">
+        </div>
+        <p>Metal music energises me</p>
+      </div>
+      <div class="various__item--facts-item ">
+        <svg class="various__item--facts-icon">
+          <use xlink:href="images/sprite.svg#i-gamepad"></use>
+        </svg>
+        <!-- <div class="various__item--facts-item-number-sign">+</div> -->
+        <div class="various__item--facts-item-number" data-count="46358">
+        </div>
+        <p>Gaming recharges me</p>
+      </div>
+      <div class="various__item--facts-item ">
+        <svg class="various__item--facts-icon">
+          <use xlink:href="images/sprite.svg#i-pig"></use>
+        </svg>
+        <!-- <div class="various__item--facts-item-number-sign various__item--facts-item-number-sign-1">+</div> -->
+        <div class="various__item--facts-item-number" data-count="10038569">
+        </div>
+        <p>Storing ideas is a place of start</p>
+      </div>
+    </div>
+    <div class="various__item--facts-box">
+      <span>Facts</span>
+      <i class="fa-solid fa-bugs various__item--facts-box-bugs"></i>
+    </div>
+    <div class="various__item--education-box">
+      <span>Education</span>
+    </div>
+    <div class="various__item--education">
+      <i class="fa-solid fa-school fa-2x various__item--education-icon"></i>
+      <h3>I went to schools in Poland so some of my education is hard to explain in a word or two</h3>
+      <p>Hence I try to explain it in equivalents.
+        <br> <br>Plus I took variety of courses while living in the UK already.
+      </p>
+      <div class="various__item--education-toggles">
+        <div class="various__item--education-toggles-item">
+          <button id="toggleBtn" class="various__item--education-toggles-button">Expand me<i
+              class="fa-solid fa-power-off"></i></button>
+          <p class="various__item--education-toggles-content" id="content-1">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius praesentium deserunt laborum neque. Ad placeat
+            magnam ex amet non facilis magni eligendi laboriosam, tempore consequatur, cumque optio eum temporibus
+            ipsam.
+          </p>
+        </div>
+        <div class="various__item--education-toggles-item">
+          <button id="toggleBtnTwo" class="various__item--education-toggles-button">Expand me<i
+              class="fa-solid fa-power-off"></i></button>
+          <p class="various__item--education-toggles-content" id="content-2">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam, vero atque cumque sequi illo et doloribus
+            voluptates exercitationem, maiores ducimus culpa distinctio eaque! Eligendi id saepe eius optio voluptas
+            commodi!
+          </p>
+        </div>
+        <div class="various__item--education-toggles-item">
+          <button id="toggleBtnThree" class="various__item--education-toggles-button">Expand me<i
+              class="fa-solid fa-power-off"></i></button>
+          <p class="various__item--education-toggles-content" id="content-3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo sit eveniet quos officia facilis culpa
+            voluptas eos esse blanditiis molestiae? Illum laudantium in eaque eum, voluptas saepe molestias nihil odio.
+          </p>
+        </div>
+        <div class="various__item--education-toggles-item">
+          <button id="toggleBtnFour" class="various__item--education-toggles-button">Expand me<i
+              class="fa-solid fa-power-off"></i></button>
+          <p class="various__item--education-toggles-content" id="content-4">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis suscipit inventore maiores eos deleniti
+            animi? Ipsum architecto asperiores temporibus odit corporis placeat. Velit molestias optio quae culpa nisi.
+            Nulla, voluptatibus.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="various__contact">
+    <div class="various__contact--box">
+      <span>Contact</span> &nbsp; <span>Me</span>
+    </div>
+    <div class="various__contact--form">
+      <h3>To get in touch fill in the form below.</h3>
+      <i class="fa-solid fa-compact-disc fa-3x various__contact--form-icon-2"></i>
+      <p>I won't get upset if you fill in the form just to tell me how awesome I am! Really, promise I won't get upset
+        like not really 😉</p>
+      <i class="fa-regular fa-square-full fa-3x various__contact--form-icon"></i>
+      <form class="various__contact--form-fields" id="contact-form">
+        <input type="name" id="name" class="various__contact--form-input" placeholder="First Name. Required field"
+          data-form-type="name" required>
+        <label for="name"></label>
+        <input type="name" id="second-name" class="various__contact--form-input" placeholder="Last Name"
+          data-form-type="name">
+        <label for="second-name"></label>
+        <input type="email" id="email" class="various__contact--form-input"
+          placeholder="Your email address. Required field" data-form-type="email" required>
+        <label for="email"></label>
+        <input type="text" id="subject" class="various__contact--form-input" placeholder="Subject"
+          data-form-type="email">
+        <label for="subject"></label>
+
+        <textarea name="text" id="message" cols="30" rows="5" class="various__contact--form-input"
+          placeholder="Your message. Required field" required></textarea>
+        <label for="message"></label>
+      </form>
+      <button class="various__contact--form-button" type="submit" form="contact-form" value="submit">Send
+        Message</button>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer__icons">
+      <i class="fa-brands fa-icon fa-slack fa-2x"><a href="#"></a></i>
+      <i class="fa-brands fa-icon fa-github fa-2x"><a href="#"></a></i>
+      <i class="fa-solid fa-icon  fa-circle-user fa-2x"><a href="#"></a></i>
+      <i class="fa-solid fa-icon  fa-message fa-2x"><a href="#"></a></i>
+    </div>
+    <div class="footer__copyright">
+      <p>&copy; 2023 Theme and page developed by Marcin The Relentless</p>
+    </div>
+  </div>
+  <!-- <div class="portofolio__item--6" id="hidden-div-6">
+    <p>show more stuff</p>
+  </div> -->
+
+
+  <!-- This is for gradient for the svg icons in about section -->
+  <svg style="width: 0; height: 0; position: absolute" aria-hidden="true" focusable="false">
+    <linearGradient id="my-cool-gradient" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4b5b78" />
+      <stop offset="50%" stop-color="#7d97c8" />
+      <stop offset="100%" stop-color="#b1c1de" />
+    </linearGradient>
+  </svg>
+
+  <!-- for hover over -->
+  <svg style="width: 0; height: 0; position: absolute" aria-hidden="true" focusable="false">
+    <linearGradient id="my-cool-gradient-1" x1="2" x2="3" y1="3" y2="1">
+      <stop offset="0%" stop-color="#b1c1de" />
+      <stop offset="50%" stop-color="#7d97c8" />
+      <stop offset="100%" stop-color="#4b5b78" />
+    </linearGradient>
+  </svg>
+
+  <!-- gradient for svc in facts section-->
+  <svg style="width: 0; height: 0; position: absolute" aria-hidden="true" focusable="false">
+    <linearGradient id="my-cool-gradient-2" x2="1" y2="1">
+      <stop offset="0%" stop-color="#54B435" />
+      <stop offset="50%" stop-color="#82CD47" />
+      <stop offset="100%" stop-color="#F0FF42" />
+    </linearGradient>
+  </svg>
+  <!-- hover for the above gradient -->
+  <svg style="width: 0; height: 0; position: absolute" aria-hidden="true" focusable="false">
+    <linearGradient id="my-cool-gradient-3" x1="1" x2="2" y2="3" y="1">
+      <stop offset="0%" stop-color="#F0FF42" />
+      <stop offset="50%" stop-color="#82CD47" />
+      <stop offset="100%" stop-color="#54B435" />
+    </linearGradient>
+  </svg>
+  <script src="scripts.js"></script>
+</body>
+
+</html>
